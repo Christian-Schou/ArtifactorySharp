@@ -3,12 +3,12 @@ using RestSharp;
 
 namespace ArtifactorySharp.Models.Repository
 {
-    public class RepositoriyImpl : IRepository
+    public class RepositoryImpl : IRepository
     {
         private IRestClient _restClient;
         private string _repo;
 
-        public RepositoriyImpl(IRestClient restClient, string repo)
+        public RepositoryImpl(IRestClient restClient, string repo)
         {
             _restClient = restClient;
             _repo = repo;
