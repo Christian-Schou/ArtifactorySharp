@@ -1,4 +1,4 @@
-﻿namespace ArtifactoryClient.Models.Repository
+﻿namespace ArtifactorySharp.Models.Repository
 {
     public class RepositoryPath
     {

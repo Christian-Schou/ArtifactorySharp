@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace ArtifactoryClient.Models
+namespace ArtifactorySharp.Models
 {
     public class Artifact
     {

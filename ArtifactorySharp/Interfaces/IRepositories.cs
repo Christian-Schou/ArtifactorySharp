@@ -1,4 +1,4 @@
-﻿namespace ArtifactoryClient.Interfaces
+﻿namespace ArtifactorySharp.Interfaces
 {
     public interface IRepositories
     {

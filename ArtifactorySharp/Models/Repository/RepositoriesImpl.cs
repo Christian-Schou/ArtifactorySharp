@@ -1,7 +1,7 @@
-﻿using ArtifactoryClient.Interfaces;
+﻿using ArtifactorySharp.Interfaces;
 using RestSharp;
 
-namespace ArtifactoryClient.Models.Repository
+namespace ArtifactorySharp.Models.Repository
 {
     public class RepositoriesImpl : IRepositories
     {

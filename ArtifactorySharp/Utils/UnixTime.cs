@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ArtifactoryClient.Utils
+namespace ArtifactorySharp.Utils
 {
     internal static class UnixTime
     {

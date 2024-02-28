@@ -1,11 +1,11 @@
 ﻿using System;
-using ArtifactoryClient.Interfaces;
-using ArtifactoryClient.Models.Repository;
-using ArtifactoryClient.Models.Search;
+using ArtifactorySharp.Interfaces;
+using ArtifactorySharp.Models.Repository;
+using ArtifactorySharp.Models.Search;
 using RestSharp;
 using RestSharp.Authenticators;
 
-namespace ArtifactoryClient
+namespace ArtifactorySharp
 {
     /// <summary>
     /// REST client for JFrog Artifactory service

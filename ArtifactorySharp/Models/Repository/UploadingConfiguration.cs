@@ -2,7 +2,7 @@
 using System.Linq;
 using RestSharp;
 
-namespace ArtifactoryClient.Models.Repository
+namespace ArtifactorySharp.Models.Repository
 {
     public class UploadingConfiguration
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using ArtifactoryClient.Utils;
+using ArtifactorySharp.Utils;
 using RestSharp;
 
-namespace ArtifactoryClient.Models.Search
+namespace ArtifactorySharp.Models.Search
 {
     public class DateRangeSearchConfiguration: BaseSearchConfiguration
     {

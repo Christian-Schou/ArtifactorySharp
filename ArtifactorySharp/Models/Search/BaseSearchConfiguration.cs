@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace ArtifactoryClient.Models.Search
+namespace ArtifactorySharp.Models.Search
 {
     /// <summary>
     /// This flags set additional information that can be added to response.

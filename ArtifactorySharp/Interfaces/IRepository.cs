@@ -1,7 +1,7 @@
-﻿using ArtifactoryClient.Models.Repository;
+﻿using ArtifactorySharp.Models.Repository;
 using RestSharp;
 
-namespace ArtifactoryClient.Interfaces
+namespace ArtifactorySharp.Interfaces
 {
     public enum RepositoryType
     {

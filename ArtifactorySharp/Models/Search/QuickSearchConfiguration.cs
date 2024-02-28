@@ -2,7 +2,7 @@
 using System.Linq;
 using RestSharp;
 
-namespace ArtifactoryClient.Models.Search
+namespace ArtifactorySharp.Models.Search
 {
     public class QuickSearchConfiguration : BaseSearchConfiguration
     {

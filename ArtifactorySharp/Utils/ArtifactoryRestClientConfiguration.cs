@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net;
-using ArtifactoryClient.Interfaces;
+using ArtifactorySharp.Interfaces;
 using RestSharp;
 using RestSharp.Authenticators;
 
-namespace ArtifactoryClient.Utils
+namespace ArtifactorySharp.Utils
 {
     public class ArtifactoryRestClientConfiguration
     {

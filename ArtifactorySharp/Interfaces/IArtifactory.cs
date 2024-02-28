@@ -1,8 +1,8 @@
 ﻿using System;
-using ArtifactoryClient.Models.Search;
+using ArtifactorySharp.Models.Search;
 using RestSharp;
 
-namespace ArtifactoryClient.Interfaces
+namespace ArtifactorySharp.Interfaces
 {
     public interface IArtifactory : IDisposable
     {

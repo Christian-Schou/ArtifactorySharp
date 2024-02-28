@@ -1,6 +1,6 @@
-﻿using ArtifactoryClient.Utils;
+﻿using ArtifactorySharp.Utils;
 
-namespace ArtifactoryClient
+namespace ArtifactorySharp
 {
     public enum PackageType
     {
