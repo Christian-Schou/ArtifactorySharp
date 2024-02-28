@@ -1,18 +1,22 @@
-# Artifacotry-Client-CSharp [![Build status](https://ci.appveyor.com/api/projects/status/7q38la3x5wo4lffc?svg=true)](https://ci.appveyor.com/project/Gotcha7770/artifacotry-client-csharp) [![NuGet Version](http://img.shields.io/nuget/v/ArtifactoryClient.svg?style=flat)](https://www.nuget.org/packages/ArtifactoryClient/)
-Rest client for JFrog Artifactory service partially inspired by https://github.com/jfrog/artifactory-client-java
+# ArtifactorySharp
+REST client for JFrog Artifactory service partially inspired by https://github.com/jfrog/artifactory-client-java and
+forked from [Artifacotry-Client-CSharp](https://github.com/Gotcha7770/Artifactory-Client-CSharp).
 
-Now only search, downloading and uploading artifatcs is available.
+The currently supported services from Artifactory are:
+- Search.
+- Downloading artifacts.
+- Uploading artifacts.
 
-There are three ways to create Artifactory client:
+There are three ways to create Artifactory client at the moment.
 
-1) with implementation of IRestClient
+1) With implementation of `IRestClient`
 
 ```csharp
 IRestClient client = new RestClient
 {
-    //url is dns name or ip address of your artifactory server
-    //without any subfolders
-    BaseUrl = new Uri("http:\\some\url"),
+    // URL is the dns name or ip address of your Artifactory server
+    // without any subfolders
+    BaseUrl = new Uri("http://some/url"),
     Authenticator = new HttpBasicAuthenticator("userName", "password")
 };
 
@@ -21,30 +25,30 @@ IArtifactory artifactory = ArtifactoryBuilder.CreateArtifactory()
     .Build();
 ```
 
-2) with implementation of IAuthenticator
+2) With implementation of `IAuthenticator`
 
 ```csharp
 IAuthenticator authenticator = new HttpBasicAuthenticator("userName", "password");
 
 IArtifactory artifactory = ArtifactoryBuilder.CreateArtifactory()
     .SetAuthentificator(authenticator)
-    .SetUrl("http:\\some\url")
+    .SetUrl("http://some/url")
     .Build();
 ```
 
-3) or just set properties
+3) Or just a set properties
 
 ```csharp
 IArtifactory artifactory = ArtifactoryBuilder.CreateArtifactory()
     .SetUserName("userName")
     .SetPassword("password")
-    .SetUrl("http:\\some\url")
+    .SetUrl("http://some/url")
     .Build();
 ```
 
 ### Search
 
-1) Quick search
+1) **Quick Search**
 
 ```csharp
 ArtifactslList artifactsList = _artifactory.Search()
@@ -56,7 +60,7 @@ if(artifactsList.Response.StatusCode == HttpStatusCode.OK)
     return artifactsList.Artifacts;
 ```
 
-2) Properties search
+2) **Properties Search**
 
 ```csharp
 ArtifactslList artifactsList = _artifactory.Search()
@@ -67,7 +71,7 @@ ArtifactslList artifactsList = _artifactory.Search()
     .Run();
 ```
 
-3) Create period search
+3) **Create Period Search**
 
 ```csharp
 ArtifactslList artifactsList = artifactory.Search()
@@ -78,13 +82,13 @@ ArtifactslList artifactsList = artifactory.Search()
     .WithOptions(ResponseOptions.Properties)
     .Run();
 ```
-### Download artifacts
+### Download Artifacts
 
 ```csharp
  IRestResponse response = artifactory.GetRepository("repositoryName").Download("your/artifact/path");
 ```
 
-### Upload artifacts
+### Upload Artifacts
 
 ```csharp
 IRestResponse response = artifactory.GetRepository("repositoryName")
