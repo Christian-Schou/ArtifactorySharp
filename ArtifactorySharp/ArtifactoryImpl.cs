@@ -12,13 +12,12 @@ namespace ArtifactorySharp
     /// </summary>
     public class ArtifactoryImpl : IArtifactory
     {
-        public IRestClient RestClient { get; }
+        private IRestClient RestClient { get; }
 
         #region Costructors
 
         public ArtifactoryImpl(string url, string userName, string password)
         {
-            //проверка url???
             RestClient = new RestClient
             {
                 BaseUrl = new Uri(url + "artifactory/"),
@@ -56,8 +55,7 @@ namespace ArtifactorySharp
             return RestClient.Execute(request);
         }
 
-        public void Dispose()
-        { }
+        public void Dispose() { }
 
         #endregion
 

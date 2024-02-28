@@ -5,7 +5,7 @@ namespace ArtifactorySharp.Models.Repository
 {
     public class RepositoriesImpl : IRepositories
     {
-        private IRestClient _restClient;
+        private readonly IRestClient _restClient;
 
         public RepositoriesImpl(IRestClient restClient)
         {
